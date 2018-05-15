@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    {% block left %}
+    <div class="col-sm-3 col-md-2 sidebar">
+         <ul class="nav nav-sidebar">
+                 <li class="active"><a href="/">OverView</a></li>
+         </ul>
+    </div>
+    {% endblock left %}
+    {% block right %}
+    <div class="col-xs-12 col-sm-8 col-lg-10 placeholder" style="height:400px;" id="main">
+
+</div>
+    <script src="static/plot.js">
+</script>
+    {% endblock right%}
+
+</div>
+{% endblock content%}

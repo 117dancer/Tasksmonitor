@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							Name
+						</th>
+						<th>
+							Status
+						</th>
+						<th>
+							Pid
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+                {% for component in myList %}
+					<tr>
+						<td>
+							{{ loop.index }}
+						</td>
+						<td>
+							{{ component["Name"] }}
+						</td>
+						<td>
+							{{ component["Status"] }}
+						</td>
+						<td>
+							{{ component["Pid"] }}
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock page_content %}
+{% block taskStart %} {% endblock %}

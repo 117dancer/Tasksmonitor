@@ -1,0 +1,39 @@
+{% extends "table.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block taskStart %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+            <h4>send tasks to sensetime</h4>
+			{% if form %}
+			{{ wtf.quick_form(form) }}
+			{% endif %}
+            <br><br>
+            <button type="button" class="btn btn-success" onclick="killTask()">
+				Kill All
+			</button>
+		</div>
+		<div class="col-md-8">
+			<nav class="pos_abs">
+		<ul class="pagination">
+					<li class="page-item">
+						<a class="page-link" href="/">Previous</a>
+					</li>
+			        <li class="page-item">
+						<a class="page-link" href="/taskStatic">Next</a>
+					</li>
+
+		</ul>
+		</nav>
+					<style type="text/css">
+nav.pos_abs
+{
+position:absolute;
+right:70px;
+top:150px
+}
+</style>
+		</div>
+	</div>
+	</div>
+{% endblock taskStart %}
